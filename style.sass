@@ -1,0 +1,406 @@
+*
+    font-family: montserrat
+h1
+    font-size: calc( ( 100vw / 1920 ) * 60 )
+    font-weight: bold
+h4
+    color: #DC8451
+    font-size: calc( ( 100vw / 1920 ) * 30 )
+@mixin font($color, $decor, $size: 25)
+    font-size: calc( ( 100vw / 1920 ) * #{$size} )
+    color: $color
+    text-decoration: $decor
+body
+    width: 100%
+.header
+    background-color: #0596A6
+    display: flex
+    justify-content: space-around
+    border-radius: 0px 0px 50px 50px
+    align-items: center
+    margin-bottom: 10px
+    &__nav-bar
+        display: flex
+        list-style: none
+        flex-basis: calc( 100vw /  3  )
+        justify-content: space-between
+        @include font($color: white, $decor: underline)
+    &>a
+        color: white
+        font-weight: bold
+        font-size: calc( ( 100vw / 1920 ) * 30 )
+.body
+    max-width: 1640px
+    margin: auto
+.main
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    align-content: space-around
+    &__text
+        @include font($color: #366273, $decor: none, $size: 30)
+        width: calc( ( 100vw / 1920 ) * 786 ) 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &>ul
+            padding: 0px
+        &>ul>li
+            list-style: none
+        &__buttons
+            margin-top: 25px
+            display: flex
+            justify-content: space-between
+            width: calc( ( 100vw / 1920 ) * 670 )
+            &>*:nth-child(1)
+                background-color: #0596A6
+            &>*:nth-child(2)
+                background-color: #DC8451
+            &>a
+                display: block
+                width: calc( ( 100vw / 1980 ) *300)
+                padding: 10px 0px
+                border-radius: 50px
+                text-align: center
+                color: white
+                text-decoration: none
+    &__image
+        &>img
+            width: calc( ( 100vw / 1920 ) *812 )
+            display: block
+.cards
+    display: flex
+    flex-direction: column
+    &__list
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        padding-inline-start: 0px
+        &>*
+            list-style: none
+            width: calc( ( 100vw / 1920 ) * 398 )
+            text-align: center
+            padding: 10px 0px
+            &:nth-child(1)
+                @include font($color: #329266, $decor: none, $size: 25)
+                border: 3px solid #329266
+                border-radius: 50px
+                text-align: center
+            &:nth-child(2)
+                @include font($color: #0596A6, $decor: none, $size: 25)
+                border: 3px solid #0596A6
+                border-radius: 50px
+                text-align: center
+            &:nth-child(3)
+                @include font($color: #366273, $decor: none, $size: 25)
+                border: 3px solid #366273
+                border-radius: 50px
+                text-align: center
+            &:nth-child(4)
+                @include font($color: #DC8451, $decor: none, $size: 25)
+                border: 3px solid #DC8451
+                border-radius: 50px
+                text-align: center
+            &:nth-child(1)::before
+                content: url(/pin_new.jpg)
+                width: calc( ( 100vw / 1920 ) * 30 )
+                vertical-align: middle
+            &:nth-child(2)::before
+                content: url(/adjust_new.png)
+                width: calc( ( 100vw / 1920 ) * 30 )
+                vertical-align: middle
+            &:nth-child(3)::before
+                content: url(/outline_new.png)
+                width: calc( ( 100vw / 1920 ) * 30 )
+                vertical-align: middle
+            &:nth-child(4)::before
+                content: url(/star_new.png)
+                width: calc( ( 100vw / 1920 ) * 30 )
+                vertical-align: middle
+// .offer
+//     display: flex
+//     &__cards
+//         display: flex
+//         border: 10px
+//         background-color: white
+//         &::after
+//             content: url(/74c66f86-567f-4673-ba38-014edaec862c.png)
+//             width: calc( ( 100vw / 1920 ) * 289 )
+//             margin-left: 17px
+//             vertical-align: middle
+//         &__text
+//             display: flex
+//             flex-direction: column
+//             justify-content: space-between
+//             &__top
+//                 display: flex
+//                 flex-direction: row
+//                 justify-content: space-between
+//                 &>p>a
+//                     font-size: 14px
+//                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+//                     font-weight: bold
+//                     color: #80BFA2
+//             &>:nth-child(2)
+//                 @include font($color: #0596A6, $decor: none, $size: 25)
+//                 margin: 0   
+//             &>:nth-child(3)
+//                 @include font($color: #0596A6, $decor: none, $size: 23)
+//                 font-weight: bold
+//             &__middle
+//                 display: flex
+//                 @include font($color: #0596A6, $decor: none, $size: 36)
+//                 justify-content: space-between
+//                 font-weight: bold
+//                 &>p
+//                     margin: 0
+//             &>p>a
+//                 color: #80BFA2
+//                 font-size: 14px
+//                 font-weight: bold
+//                 font-family: Segoe UI
+//             &__tags
+//                 display: flex
+//                 &>div>p
+//                     display: flex
+//                     flex-direction: column
+//                     margin: 0
+//                     text-align: center
+//                     &:nth-child(1)
+//                         @include font($color: #707070, $decor: none, $size: 14)
+//                     &:nth-child(2)
+//                         @include font($color: #366273, $decor: none, $size: 21)
+//                         font-weight: bold
+//             &__button
+//                 &>a
+//                     @include font($color: white, $decor: none, $size: 21)
+//                     background-color: #DC8451
+//                     padding: 10px 30px
+//                     border-radius: 50px                                
+//     &__txt
+// .pupa
+//     display: flex
+//     flex-direction: column
+.offer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__cards
+        &__block
+            display: flex
+            border-radius: 10px
+            margin-top: 20px
+            & p
+                margin: 0
+                color: #0596A6
+                font-weight: bold
+            &::after
+                content: url(/74c66f86-567f-4673-ba38-014edaec862c.png)
+                width: calc( ( 100vw / 1920 ) * 289 )
+                margin-left: 17px
+                vertical-align: middle
+            &__txt
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                &__mini
+                    display: flex
+                    justify-content: space-between
+                    & a
+                        @include font($color: #80BFA2, $decor: none, $size: 14)
+                &__price
+                    display: flex
+                    justify-content: space-between
+                    font-size: calc( ( 100vw / 1920 ) * 36 )
+                    &+p
+                        font-size: ( ( 100vw / 1920 ) * 23 )
+                &__icons
+                    display: flex
+                    &__tag
+                        display: flex
+                        &>p>a:first-child
+                            color: #707070 !important
+                            font-size: ( ( 100vw / 1920 ) * 14 ) !important
+                            font-weight: normal !important
+                        &>p>a
+                            display: flex
+                            flex-direction: column
+                            text-align: center
+                            font-size: ( ( 100vw / 1920 ) * 21 )
+                &__btn 
+                    &>a
+                        background-color: #DC8451
+                        padding: 10px 50px
+                        @include font($color: white, $decor: none, $size: 14)
+                        border-radius: 50px
+    &__text
+        width: calc( ( 100vw / 1920 ) * 674 )                 
+        &>h3
+            @include font($color: #366273, $decor: none, $size: 40)
+            font-weight: bold
+        &>p
+            @include font($color: #366273, $decor: none, $size: 25)
+        &>a
+            @include font($color: white, $decor: none, $size: 30)
+            border-radius: 50px
+            background-color: #DC8451
+            padding: 10px 50px
+h2
+    @include font($color: #366273, $decor: none, $size: 40)
+    font-weight: bold
+    text-align: center
+.advantage
+    display: flex
+    justify-content: space-between
+    &__cort
+        border-radius: 10px
+        width: calc( ( 100vw / 1920 ) * 398 )
+        display: flex
+        height: 500px
+        justify-content: center
+        &__txt
+            width: calc( ( 100vw / 1920 ) * 338 )
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-evenly
+            &>img
+                width: calc( ( 100vw / 1920 ) * 100 )
+            &>h3
+                font-size: calc( ( 100vw / 1920 ) * 30 )
+                font-weight: bold
+                text-align: center
+            &>p
+                font-size: calc( ( 100vw / 1920 ) * 20 )
+                text-align: center 
+        &:first-child
+            border:#0596A6 solid 3px
+            color: #0596A6
+        &:nth-child(2)
+            border:#329266 solid 3px
+            color: #329266
+        &:nth-child(3)
+            border: #DC8451 solid 3px
+            color: #DC8451
+        &:nth-child(4)
+            border: #366273 solid 3px
+            color: #366273
+.footer
+    display: flex
+    padding-top: 20px
+    background-color:#0596A6
+    border-radius: 50px 50px 0px 0px
+    margin-top: 20px
+    justify-content: space-around
+    & li
+        list-style: none
+    &__left
+        text-align: left
+        color: white
+        font-size: calc( ( 100vw / 1920 ) * 25 )
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        text-decoration: underline
+        height: 50%
+        &>ul>li:nth-child(1)
+            font-weight: bold !important
+            font-size: calc( ( 100vw / 1920 ) * 30 )
+            text-decoration: none !important
+    &__center
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        &>a:nth-child(1)
+            font-weight: bold !important
+            font-size: calc( ( 100vw / 1920 ) * 30 ) !important
+            color: white !important
+            background-color: transparent
+        &>a
+            display: block
+            padding: 10px 100px
+            background-color: white
+            color: #0596A6
+            border-radius: 50px
+            font-size: calc( ( 100vw / 1920 ) * 25 )
+        &>a:nth-child(4)
+            background-color: #80BFA2 !important
+            color: white !important
+    &__right
+        display: flex
+        flex-direction: column
+        color: white
+        text-align: right
+        &>ul
+            display:flex
+            flex-direction: column
+            height: 90%
+            justify-content: space-around
+            &>li
+                &>a
+                    font-size: calc( ( 100vw / 1920 ) * 25 )
+                    text-decoration: underline
+            &>li:nth-child(1)
+                font-weight: bold
+@media (max-width: 760px)
+    @mixin font($color, $decor, $size: 25)
+        font-size: calc( ( 100vw / 760 ) * #{$size} )
+        color: $color
+        text-decoration: $decor
+    h1
+        font-size: calc( ( 100vw / 760 ) * 60 )
+        font-weight: bold
+    h4
+        color: #DC8451
+        font-size: calc( ( 100vw / 760 ) * 30 )
+        text-align: center
+    .main
+        display: unset
+        &__text
+            width: 100vw
+            text-align: center
+            &__buttons
+                margin: auto
+                margin-top: 15px
+        &__image
+            display: none
+    .cards
+        &__list
+            width: 60%
+            align-self: center
+            flex-wrap: wrap
+            &>li
+                width: 45%
+                margin-top: 10px
+    .offer
+        display: flex
+        flex-direction: column
+        &__cards
+            align-self: center
+            width: 100%
+            display: flex
+            flex-direction: column
+            &__block
+                width: 100%
+                align-self: center
+                &__txt
+                    text-align: center
+        &__text
+            width: 90%
+            &>a
+    .advantage
+        flex-wrap: wrap
+        justify-content: space-around
+        &__cort
+            width: 45%
+            height: 150px
+            margin-top: 10px
+            &__txt
+                width: 90%
+    .body
+        width: 100%
+    body
+        margin: 0
+        
