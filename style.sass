@@ -14,6 +14,9 @@ h4
     text-decoration: $decor
 body
     width: 100%
+    margin: 0
+#toggle
+    display: none
 .header
     background-color: #0596A6
     display: flex
@@ -189,6 +192,7 @@ body
     align-items: center
     justify-content: space-between
     &__cards
+        margin: auto
         &__block
             display: flex
             border-radius: 10px
@@ -216,28 +220,29 @@ body
                     justify-content: space-between
                     font-size: calc( ( 100vw / 1920 ) * 36 )
                     &+p
-                        font-size: ( ( 100vw / 1920 ) * 23 )
+                        font-size: calc( ( 100vw / 1920 ) * 23 )
                 &__icons
                     display: flex
                     &__tag
                         display: flex
                         &>p>a:first-child
                             color: #707070 !important
-                            font-size: ( ( 100vw / 1920 ) * 14 ) !important
+                            font-size: calc( ( 100vw / 1920 ) * 14 ) !important
                             font-weight: normal !important
                         &>p>a
                             display: flex
                             flex-direction: column
                             text-align: center
-                            font-size: ( ( 100vw / 1920 ) * 21 )
+                            font-size: calc( ( 100vw / 1920 ) * 21 )
                 &__btn 
                     &>a
                         background-color: #DC8451
                         padding: 10px 50px
-                        @include font($color: white, $decor: none, $size: 14)
+                        @include font($color: white, $decor: none, $size: 24) 
                         border-radius: 50px
     &__text
-        width: calc( ( 100vw / 1920 ) * 674 )                 
+        width: calc( ( 100vw / 1920 ) * 674 )
+        text-align: center                 
         &>h3
             @include font($color: #366273, $decor: none, $size: 40)
             font-weight: bold
@@ -248,6 +253,7 @@ body
             border-radius: 50px
             background-color: #DC8451
             padding: 10px 50px
+            
 h2
     @include font($color: #366273, $decor: none, $size: 40)
     font-weight: bold
@@ -347,6 +353,8 @@ h2
             &>li:nth-child(1)
                 font-weight: bold
 @media (max-width: 760px)
+    #toggle
+        display: flex
     @mixin font($color, $decor, $size: 25)
         font-size: calc( ( 100vw / 760 ) * #{$size} )
         color: $color
@@ -385,8 +393,9 @@ h2
             display: flex
             flex-direction: column
             &__block
-                width: 100%
                 align-self: center
+                &::after
+                    display: none
                 &__txt
                     text-align: center
         &__text
@@ -405,4 +414,9 @@ h2
         width: 100%
     body
         margin: 0
-        
+    .header__nav-bar
+        display: none
+        &__act
+            display: flex
+    .toggle__hidden
+        display: none

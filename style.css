@@ -14,6 +14,11 @@ h4 {
 
 body {
   width: 100%;
+  margin: 0;
+}
+
+#toggle {
+  display: none;
 }
 
 .header {
@@ -234,6 +239,10 @@ body {
           justify-content: space-between;
 }
 
+.offer__cards {
+  margin: auto;
+}
+
 .offer__cards__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,7 +303,7 @@ body {
 }
 
 .offer__cards__block__txt__price + p {
-  font-size: 1.19792vw;
+  font-size: calc( ( 100vw / 1920 ) * 23);
 }
 
 .offer__cards__block__txt__icons {
@@ -311,7 +320,7 @@ body {
 
 .offer__cards__block__txt__icons__tag > p > a:first-child {
   color: #707070 !important;
-  font-size: 0.72917vw !important;
+  font-size: calc( ( 100vw / 1920 ) * 14) !important;
   font-weight: normal !important;
 }
 
@@ -324,13 +333,13 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  font-size: 1.09375vw;
+  font-size: calc( ( 100vw / 1920 ) * 21);
 }
 
 .offer__cards__block__txt__btn > a {
   background-color: #DC8451;
   padding: 10px 50px;
-  font-size: calc( ( 100vw / 1920 ) * 14);
+  font-size: calc( ( 100vw / 1920 ) * 24);
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -338,6 +347,7 @@ body {
 
 .offer__text {
   width: calc( ( 100vw / 1920 ) * 674);
+  text-align: center;
 }
 
 .offer__text > h3 {
@@ -550,6 +560,11 @@ h2 {
 }
 
 @media (max-width: 760px) {
+  #toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   h1 {
     font-size: calc( ( 100vw / 760 ) * 60);
     font-weight: bold;
@@ -607,10 +622,12 @@ h2 {
             flex-direction: column;
   }
   .offer__cards__block {
-    width: 100%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  .offer__cards__block::after {
+    display: none;
   }
   .offer__cards__block__txt {
     text-align: center;
@@ -637,6 +654,17 @@ h2 {
   }
   body {
     margin: 0;
+  }
+  .header__nav-bar {
+    display: none;
+  }
+  .header__nav-bar__act {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .toggle__hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
