@@ -569,10 +569,16 @@ h2 {
     font-size: calc( ( 100vw / 760 ) * 60);
     font-weight: bold;
   }
+  h2 {
+    font-size: calc( ( 100vw / 760 ) * 25) !important;
+  }
   h4 {
     color: #DC8451;
     font-size: calc( ( 100vw / 760 ) * 30);
     text-align: center;
+  }
+  h3 {
+    font-size: calc( ( 100vw / 760 ) * 25) !important;
   }
   .main {
     display: unset;
@@ -581,9 +587,16 @@ h2 {
     width: 100vw;
     text-align: center;
   }
+  .main__text > p {
+    font-size: calc( ( 100vw / 760 ) * 30);
+  }
+  .main__text > ul > li > a {
+    font-size: calc( ( 100vw / 760 ) * 25);
+  }
   .main__text__buttons {
     margin: auto;
     margin-top: 15px;
+    font-size: calc( ( 100vw / 760 ) * 15);
   }
   .main__image {
     display: none;
@@ -599,6 +612,7 @@ h2 {
   .cards__list > li {
     width: 45%;
     margin-top: 10px;
+    font-size: calc( ( 100vw / 760 ) * 20);
   }
   .offer {
     display: -webkit-box;
@@ -635,6 +649,9 @@ h2 {
   .offer__text {
     width: 90%;
   }
+  .offer__text > p {
+    font-size: calc( ( 100vw / 760 ) * 15) !important;
+  }
   .advantage {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -648,6 +665,9 @@ h2 {
   }
   .advantage__cort__txt {
     width: 90%;
+  }
+  .advantage__cort__txt > p {
+    font-size: calc( ( 100vw / 760 ) * 10) !important;
   }
   .body {
     width: 100%;

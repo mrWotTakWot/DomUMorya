@@ -362,18 +362,27 @@ h2
     h1
         font-size: calc( ( 100vw / 760 ) * 60 )
         font-weight: bold
+    h2
+        font-size: calc( ( 100vw / 760 ) * 25 )!important
     h4
         color: #DC8451
         font-size: calc( ( 100vw / 760 ) * 30 )
         text-align: center
+    h3
+        font-size: calc( ( 100vw / 760 ) * 25 )!important
     .main
         display: unset
         &__text
             width: 100vw
             text-align: center
+            &>p
+                font-size: calc( ( 100vw / 760 ) * 30 )
+            &>ul>li>a
+                font-size: calc( ( 100vw / 760 ) * 25 )
             &__buttons
                 margin: auto
                 margin-top: 15px
+                font-size: calc( ( 100vw / 760 ) * 15 )
         &__image
             display: none
     .cards
@@ -384,6 +393,7 @@ h2
             &>li
                 width: 45%
                 margin-top: 10px
+                font-size: calc( ( 100vw / 760 ) * 20 )
     .offer
         display: flex
         flex-direction: column
@@ -400,7 +410,8 @@ h2
                     text-align: center
         &__text
             width: 90%
-            &>a
+            &>p
+                font-size: calc( ( 100vw / 760 ) * 15 )!important
     .advantage
         flex-wrap: wrap
         justify-content: space-around
@@ -410,6 +421,8 @@ h2
             margin-top: 10px
             &__txt
                 width: 90%
+                &>p
+                    font-size: calc( ( 100vw / 760 ) * 10 )!important
     .body
         width: 100%
     body
