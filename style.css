@@ -650,7 +650,7 @@ h2 {
     width: 90%;
   }
   .offer__text > p {
-    font-size: calc( ( 100vw / 760 ) * 15) !important;
+    font-size: calc( ( 100vw / 760 ) * 20) !important;
   }
   .advantage {
     -ms-flex-wrap: wrap;
@@ -666,7 +666,7 @@ h2 {
     width: 90%;
   }
   .advantage__cort__txt > p {
-    font-size: calc( ( 100vw / 760 ) * 10) !important;
+    font-size: calc( ( 100vw / 760 ) * 20) !important;
   }
   .body {
     width: 100%;
