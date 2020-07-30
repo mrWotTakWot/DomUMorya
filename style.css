@@ -559,6 +559,10 @@ h2 {
   font-weight: bold;
 }
 
+.mn_h {
+  display: none;
+}
+
 @media (max-width: 760px) {
   #toggle {
     display: -webkit-box;
@@ -659,9 +663,8 @@ h2 {
         justify-content: space-around;
   }
   .advantage__cort {
-    width: 45%;
-    height: 150px;
     margin-top: 10px;
+    padding: 5%;
   }
   .advantage__cort__txt {
     width: 90%;
