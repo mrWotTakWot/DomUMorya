@@ -21,6 +21,10 @@ body {
   display: none;
 }
 
+.mn {
+  display: none !important;
+}
+
 .header {
   background-color: #0596A6;
   display: -webkit-box;
@@ -660,7 +664,7 @@ h2 {
   }
   .advantage__cort {
     margin-top: 10px;
-    padding: 5%;
+    width: 47%;
   }
   .advantage__cort__txt {
     width: 90%;
@@ -687,6 +691,9 @@ h2 {
   }
   .mn_h {
     display: none !important;
+  }
+  .mn {
+    display: block !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
