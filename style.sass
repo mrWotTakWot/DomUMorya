@@ -79,53 +79,94 @@ body
 .cards
     display: flex
     flex-direction: column
-    &__list
+    &__roster
+        list-style: none
         display: flex
-        flex-direction: row
         justify-content: space-between
-        width: 100%
-        padding-inline-start: 0px
-        &>*
-            list-style: none
-            width: calc( ( 100vw / 1920 ) * 398 )
-            text-align: center
-            padding: 10px 0px
-            &:nth-child(1)
-                @include font($color: #329266, $decor: none, $size: 25)
-                border: 3px solid #329266
-                border-radius: 50px
-                text-align: center
-            &:nth-child(2)
-                @include font($color: #0596A6, $decor: none, $size: 25)
-                border: 3px solid #0596A6
-                border-radius: 50px
-                text-align: center
-            &:nth-child(3)
-                @include font($color: #366273, $decor: none, $size: 25)
-                border: 3px solid #366273
-                border-radius: 50px
-                text-align: center
-            &:nth-child(4)
-                @include font($color: #DC8451, $decor: none, $size: 25)
-                border: 3px solid #DC8451
-                border-radius: 50px
-                text-align: center
-            &:nth-child(1)::before
-                content: url(/pin_new.jpg)
-                width: calc( ( 100vw / 1920 ) * 30 )
-                vertical-align: middle
-            &:nth-child(2)::before
-                content: url(/adjust_new.png)
-                width: calc( ( 100vw / 1920 ) * 30 )
-                vertical-align: middle
-            &:nth-child(3)::before
-                content: url(/outline_new.png)
-                width: calc( ( 100vw / 1920 ) * 30 )
-                vertical-align: middle
-            &:nth-child(4)::before
-                content: url(/star_new.png)
-                width: calc( ( 100vw / 1920 ) * 30 )
-                vertical-align: middle
+        padding-left: 0px
+        padding: 10px 0px
+        align-content: space-around
+        flex-wrap: wrap
+        &>li
+            display: flex
+            align-content: center
+            width: calc( 25% - 16px )
+            border-radius: 50px
+            &>a
+                margin: auto
+                padding: 5px
+            &>a>a
+                align-content: center
+        &>*>*>img
+            width: 70%
+            align-self: center
+        &>li:nth-child(1)
+            border: #329266 solid 3px
+            color: #329266
+            font-size: ( ( 100vw / 1920 ) * 25 )
+            font-weight: bold
+        &>li:nth-child(2)
+            border: #0596A6 solid 3px
+            color: #0596A6
+            font-size: ( ( 100vw / 1920 ) * 25 )
+            font-weight: bold 
+        &>li:nth-child(3)
+            border: #366273 solid 3px
+            color: #366273
+            font-size: ( ( 100vw / 1920 ) * 25 )
+            font-weight: bold 
+        &>li:nth-child(4)
+            border: #DC8451 solid 3px
+            color: #DC8451
+            font-size: ( ( 100vw / 1920 ) * 25 )
+            font-weight: bold     
+    // &__list
+    //     display: flex
+    //     flex-direction: row
+    //     justify-content: space-between
+    //     width: 100%
+    //     padding-inline-start: 0px
+    //     &>*
+    //         list-style: none
+    //         width: calc( ( 100vw / 1920 ) * 398 )
+    //         text-align: center
+    //         padding: 10px 0px
+    //         &:nth-child(1)
+    //             @include font($color: #329266, $decor: none, $size: 25)
+    //             border: 3px solid #329266
+    //             border-radius: 50px
+    //             text-align: center
+    //         &:nth-child(2)
+    //             @include font($color: #0596A6, $decor: none, $size: 25)
+    //             border: 3px solid #0596A6
+    //             border-radius: 50px
+    //             text-align: center
+    //         &:nth-child(3)
+    //             @include font($color: #366273, $decor: none, $size: 25)
+    //             border: 3px solid #366273
+    //             border-radius: 50px
+    //             text-align: center
+    //         &:nth-child(4)
+    //             @include font($color: #DC8451, $decor: none, $size: 25)
+    //             border: 3px solid #DC8451
+    //             border-radius: 50px
+    //             text-align: center
+    //         &:nth-child(1)::before
+    //             content: url(/pin_new.jpg)
+    //             width: calc( ( 100vw / 1920 ) * 30 )
+    //             vertical-align: middle
+    //         &:nth-child(2)::before
+    //             content: url(/adjust_new.png)
+    //             width: calc( ( 100vw / 1920 ) * 30 )
+    //             vertical-align: middle
+    //         &:nth-child(3)::before
+    //             content: url(/outline_new.png)
+    //             width: calc( ( 100vw / 1920 ) * 30 )
+    //             vertical-align: middle
+    //         &:nth-child(4)::before
+    //             content: url(/star_new.png)
+    //             width: calc( ( 100vw / 1920 ) * 30 )
+    //             vertical-align: middle
 .offer
     display: flex
     align-items: center
@@ -215,6 +256,7 @@ h2
             justify-content: space-evenly
             &>img
                 width: calc( ( 100vw / 1920 ) * 100 )
+                padding-top: 1vh
             &>h3
                 font-size: calc( ( 100vw / 1920 ) * 30 )
                 font-weight: bold
@@ -355,18 +397,24 @@ h2
            font-size: calc( ( 100vw / 760 ) * 30 )
            margin: 0 
            text-align: center
-        &__list
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-around
-            margin: 0
+        &__roster
             &>li
-                width: 47%
+                width: calc( 50% - 10px )
                 margin-top: 10px
-                &::before
-                    display: none
-            &>li>a
-                font-size: calc( ( 100vw / 760 ) * 25 )  
+                &>a
+                    font-size: calc( ( 100vw / 760 ) * 25 )!important
+        // &__list
+        //     display: flex
+        //     flex-wrap: wrap
+        //     justify-content: space-around
+        //     margin: 0
+        //     &>li
+        //         width: 47%
+        //         margin-top: 10px
+        //         &::before
+        //             display: none
+        //     &>li>a
+        //         font-size: calc( ( 100vw / 760 ) * 25 )  
     .offer
         flex-direction: column
         width: 100%
@@ -446,6 +494,7 @@ h2
                         font-size: calc( ( 100vw / 760 ) * 25 )    
     h2
         font-size: calc( ( 100vw / 760 ) * 30 )
+        margin-top: 25px
     .advantage
         display: flex
         flex-wrap: wrap
@@ -461,4 +510,6 @@ h2
                 &>p
                     font-size: calc( ( 100vw / 760 ) * 25 )
                 &>img
-                    width: 50%
+                    width: 40%
+                    margin-top: 10px
+                    
