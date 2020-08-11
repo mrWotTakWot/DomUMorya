@@ -52,6 +52,7 @@ body {
   font-size: calc( ( 100vw / 1920 ) * 25);
   color: white;
   text-decoration: underline;
+  padding: 0;
 }
 
 .header > a {
@@ -479,6 +480,7 @@ h2 {
       justify-content: space-around;
   text-decoration: underline;
   height: 50%;
+  width: 15vw;
 }
 
 .footer__left > ul > li:nth-child(1) {
@@ -489,6 +491,10 @@ h2 {
 
 .footer__left > ul > li > a > span {
   font-weight: bold;
+}
+
+.footer__left > ul {
+  padding-left: 0px;
 }
 
 .footer__center {
@@ -515,11 +521,13 @@ h2 {
 
 .footer__center > a {
   display: block;
-  padding: 10px 100px;
+  padding: 10px;
+  width: 250px;
   background-color: white;
   color: #0596A6;
   border-radius: 50px;
   font-size: calc( ( 100vw / 1920 ) * 25);
+  text-align: center;
 }
 
 .footer__center > a:nth-child(4) {
@@ -640,8 +648,9 @@ h2 {
   .main__text__buttons {
     font-size: calc( ( 100vw / 760 ) * 22);
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .main__text__buttons > a {
     padding: 10px 20px;
@@ -704,6 +713,10 @@ h2 {
   }
   .offer__cards__block__txt__icons__tag > p:nth-child(2) > a:nth-child(2) {
     font-size: calc( ( 100vw / 760 ) * 25);
+  }
+  .offer__cards__block__txt__btn {
+    margin-top: 10px;
+    text-align: center;
   }
   .offer__cards__block__txt__btn > a {
     font-size: calc( ( 100vw / 760 ) * 20);

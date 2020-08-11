@@ -32,6 +32,7 @@ body
         flex-basis: calc( 100vw /  3  )
         justify-content: space-between
         @include font($color: white, $decor: underline)
+        padding: 0
     &>a
         color: white
         font-weight: bold
@@ -294,12 +295,15 @@ h2
         justify-content: space-around
         text-decoration: underline
         height: 50%
+        width: 15vw
         &>ul>li:nth-child(1)
             font-weight: bold !important
             font-size: calc( ( 100vw / 1920 ) * 30 )
             text-decoration: none !important
         &>ul>li>a>span
             font-weight: bold
+        &>ul
+            padding-left: 0px
     &__center
         display: flex
         flex-direction: column
@@ -312,11 +316,13 @@ h2
             background-color: transparent
         &>a
             display: block
-            padding: 10px 100px
+            padding: 10px
+            width: 250px
             background-color: white
             color: #0596A6
             border-radius: 50px
             font-size: calc( ( 100vw / 1920 ) * 25 )
+            text-align: center
         &>a:nth-child(4)
             background-color: #80BFA2 !important
             color: white !important
@@ -389,7 +395,7 @@ h2
         &__buttons
             font-size: calc( ( 100vw / 760 ) * 22 )
             width: 100%
-            justify-content: space-around
+            justify-content: space-between
             &>a
                 padding: 10px 20px           
     .cards
@@ -444,6 +450,8 @@ h2
                                 &>a:nth-child(2)
                                     font-size: calc( ( 100vw / 760 ) * 25 )
                     &__btn
+                        margin-top: 10px
+                        text-align: center
                         &>a
                             font-size: calc( ( 100vw / 760 ) * 20 )
                     &__price
