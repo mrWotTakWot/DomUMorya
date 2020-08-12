@@ -1,5 +1,3 @@
-// Main stylesheets
-// я ебал гусей123
 *
     font-family: montserrat
 h1
@@ -30,6 +28,8 @@ body
     border-radius: 0px 0px 50px 50px
     align-items: center
     margin-bottom: 10px
+    &>a
+        margin-left: -30px
     &__nav-bar
         display: flex
         list-style: none
@@ -135,53 +135,6 @@ body
             color: #DC8451
             font-size: ( ( 100vw / 1920 ) * 25 )
             font-weight: bold     
-    // &__list
-    //     display: flex
-    //     flex-direction: row
-    //     justify-content: space-between
-    //     width: 100%
-    //     padding-inline-start: 0px
-    //     &>*
-    //         list-style: none
-    //         width: calc( ( 100vw / 1920 ) * 398 )
-    //         text-align: center
-    //         padding: 10px 0px
-    //         &:nth-child(1)
-    //             @include font($color: #329266, $decor: none, $size: 25)
-    //             border: 3px solid #329266
-    //             border-radius: 50px
-    //             text-align: center
-    //         &:nth-child(2)
-    //             @include font($color: #0596A6, $decor: none, $size: 25)
-    //             border: 3px solid #0596A6
-    //             border-radius: 50px
-    //             text-align: center
-    //         &:nth-child(3)
-    //             @include font($color: #366273, $decor: none, $size: 25)
-    //             border: 3px solid #366273
-    //             border-radius: 50px
-    //             text-align: center
-    //         &:nth-child(4)
-    //             @include font($color: #DC8451, $decor: none, $size: 25)
-    //             border: 3px solid #DC8451
-    //             border-radius: 50px
-    //             text-align: center
-    //         &:nth-child(1)::before
-    //             content: url(/pin_new.jpg)
-    //             width: calc( ( 100vw / 1920 ) * 30 )
-    //             vertical-align: middle
-    //         &:nth-child(2)::before
-    //             content: url(/adjust_new.png)
-    //             width: calc( ( 100vw / 1920 ) * 30 )
-    //             vertical-align: middle
-    //         &:nth-child(3)::before
-    //             content: url(/outline_new.png)
-    //             width: calc( ( 100vw / 1920 ) * 30 )
-    //             vertical-align: middle
-    //         &:nth-child(4)::before
-    //             content: url(/star_new.png)
-    //             width: calc( ( 100vw / 1920 ) * 30 )
-    //             vertical-align: middle
 .offer
     display: flex
     align-items: center
@@ -293,78 +246,14 @@ h2
         &:nth-child(4)
             border: #366273 solid 3px
             color: #366273
-// .footer
-//     display: flex
-//     padding-top: 20px
-//     background-color:#0596A6
-//     border-radius: 50px 50px 0px 0px
-//     margin-top: 20px
-//     justify-content: space-around
-//     & li
-//         list-style: none
-//     &__left
-//         text-align: left
-//         color: white
-//         font-size: calc( ( 100vw / 1920 ) * 25 )
-//         display: flex
-//         flex-direction: column
-//         justify-content: space-around
-//         text-decoration: underline
-//         height: 50%
-//         width: 15vw
-//         &>ul>li:nth-child(1)
-//             font-weight: bold !important
-//             font-size: calc( ( 100vw / 1920 ) * 30 )
-//             text-decoration: none !important
-//         &>ul>li>a>span
-//             font-weight: bold
-//         &>ul
-//             padding-left: 0px
-//     &__center
-//         display: flex
-//         flex-direction: column
-//         justify-content: space-around
-//         align-items: center
-//         &>a:nth-child(1)
-//             font-weight: bold !important
-//             font-size: calc( ( 100vw / 1920 ) * 30 ) !important
-//             color: white !important
-//             background-color: transparent
-//         &>a
-//             display: block
-//             padding: 10px
-//             width: 250px
-//             background-color: white
-//             color: #0596A6
-//             border-radius: 50px
-//             font-size: calc( ( 100vw / 1920 ) * 25 )
-//             text-align: center
-//         &>a:nth-child(4)
-//             background-color: #80BFA2 !important
-//             color: white !important
-//     &__right
-//         display: flex
-//         flex-direction: column
-//         color: white
-//         text-align: right
-//         &>ul
-//             display:flex
-//             flex-direction: column
-//             height: 90%
-//             justify-content: space-around
-//             &>li
-//                 &>a
-//                     font-size: calc( ( 100vw / 1920 ) * 25 )
-//                     text-decoration: underline
-//             &>li:nth-child(1)
-//                 font-weight: bold
+
 .footer
-    margin-top: calc( ( 100vw / 1080 ) * 92 )
+    margin-top: calc( ( 100vw / 1080 ) * 98 )
     background-color: #0596A6
     border-radius: 50px 50px 0px 0px
     padding-bottom: calc( ( 100vw / 1080 ) * 56 )
     &__content
-        padding-top: calc( ( 100vw / 10 ) - 58px )
+        padding-top: calc( ( 100vw / 1080 ) * 50 )
         display: flex
         justify-content: space-between
         max-width: calc( ( 100vw / 1920 ) * 1640 )
@@ -424,6 +313,8 @@ h2
                     &:nth-child(1)
                         font-weight: bold
 .mn-f
+    display: none
+.footerm
     display: none
 @media (max-width: 1370px)
     .offer
@@ -490,18 +381,6 @@ h2
                 margin-top: 10px
                 &>a
                     font-size: calc( ( 100vw / 760 ) * 25 )!important
-        // &__list
-        //     display: flex
-        //     flex-wrap: wrap
-        //     justify-content: space-around
-        //     margin: 0
-        //     &>li
-        //         width: 47%
-        //         margin-top: 10px
-        //         &::before
-        //             display: none
-        //     &>li>a
-        //         font-size: calc( ( 100vw / 760 ) * 25 )  
     .offer
         flex-direction: column
         width: 100%
@@ -551,54 +430,55 @@ h2
                 font-size: calc( ( 100vw / 760 ) * 30 )
             &>a
                 font-size: calc( ( 100vw / 760 ) * 25 )
-    .offer__cards__block__txt__price + p
-        font-size: calc( ( 100vw / 760 ) * 25 )
-    .footer
-        flex-direction: column
-        align-items: center
-        &__left
-            width: 100vw
-            &>ul
-                padding-left: 0px
-            &>ul>li
-                text-align: center
-                &>a
-                    font-size: calc( ( 100vw / 760 ) * 25 )
-        &__center
-            display: none
-        &__right
-            &>div:nth-child(1)
-                display: flex
-                justify-content: space-around
-                margin-top: 10px
-            &>ul
-                display: flex
-                flex-direction: row
-                justify-content: space-around
-                width: 100vw
-                padding-left: 0px
-                flex-wrap: wrap
-                &>li
-                    &>a
-                        font-size: calc( ( 100vw / 760 ) * 25 )    
-    h2
-        font-size: calc( ( 100vw / 760 ) * 30 )
-        margin-top: 25px
-    .advantage
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-around
-        &__cort
-            width: 45%
-            margin-top: 10px
-            height: 50vh
-            &__txt
-                width: 90%
-                &>h3
-                    font-size: calc( ( 100vw / 760 ) * 30 )
-                &>p
-                    font-size: calc( ( 100vw / 760 ) * 25 )
-                &>img
-                    width: 40%
-                    margin-top: 10px
-                    
+    // .offer__cards__block__txt__price + p
+    //     font-size: calc( ( 100vw / 760px ) * 25px )
+    // .footer
+    //     display: none
+    //     flex-direction: column
+    //      align-items: center
+    //      &__left
+    //          width: 100vw
+    //          &>ul
+    //              padding-left: 0px
+    //          &>ul>li
+    //              text-align: center
+    //              &>a
+    //                  font-size: calc( ( 100vw / 760 ) * 25 )
+    //      &__center
+    //          display: none
+    //      &__right
+    //          &>div:nth-child(1)
+    //              display: flex
+    //              justify-content: space-around
+    //              margin-top: 10px
+    //          &>ul
+    //              display: flex
+    //              flex-direction: row
+    //              justify-content: space-around
+    //              width: 100vw
+    //              padding-left: 0px
+    //              flex-wrap: wrap
+    //              &>li
+    //                  &>a
+    //                      font-size: calc( ( 100vw / 760 ) * 25 )    
+    //  h2
+    //      font-size: calc( ( 100vw / 760 ) * 30 )
+    //      margin-top: 25px
+    //  .advantage
+    //      display: flex
+    //      flex-wrap: wrap
+    //      justify-content: space-around
+    //      &__cort
+    //          width: 45%
+    //          margin-top: 10px
+    //          height: 50vh
+    //          &__txt
+    //              width: 90%
+    //              &>h3
+    //                  font-size: calc( ( 100vw / 760 ) * 30 )
+    //              &>p
+    //                  font-size: calc( ( 100vw / 760 ) * 25 )
+    //              &>img
+    //                  width: 40%
+    //                  margin-top: 10px
+
